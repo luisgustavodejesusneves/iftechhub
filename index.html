@@ -262,11 +262,35 @@
   </section>
 
   <!-- Contato e fale conosco -->
-  <section id="contato" class="py-5 bg-white">
-    <div class="container">
-      <h2 class="text-center mb-4">Entre em contato conosco</h2>
-      
-  </section>
+<section id="contato">
+  <h2>Entre em contato conosco</h2>
+  <p>Preencha o formulário abaixo e fale com a equipe da IFTechHub.</p>
+
+  <form id="form-contato">
+    <div class="campo">
+      <label for="nome">Nome completo *</label>
+      <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="campo">
+      <label for="email">E-mail *</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="campo">
+      <label for="assunto">Assunto *</label>
+      <input type="text" id="assunto" name="assunto" required>
+    </div>
+
+    <div class="campo">
+      <label for="mensagem">Mensagem *</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+    </div>
+
+    <button type="submit">Enviar mensagem</button>
+  </form>
+</section>
+
 
   <!-- Footer -->
   <footer class="py-4 bg-primary text-white">
