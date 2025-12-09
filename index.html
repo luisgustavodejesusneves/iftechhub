@@ -53,7 +53,7 @@
 
 
   <!-- Seção missão, visão e valores -->
-<section id="missao" class="py-5 bg-white" style="padding: 3rem 1rem; background: var(--white);">
+<section id="missao" class="py-5" style="padding: 3rem 1rem; background: var(--white);">
   <div class="container" style="max-width: 1100px; margin: 0 auto;">
       
       <h2 class="text-center mb-4" style="text-align: center; margin-bottom: 1.8rem;">
@@ -100,7 +100,7 @@
           <div class="d-flex align-items-center mb-3">
             
             <div>
-              <h2 class="service-title mb-0">Nossos Serviços</h2>
+              <h2 class="service-title mb-3">Nossos Serviços</h2>
             </div>
           </div>
 
@@ -261,35 +261,71 @@
     </div>
   </section>
 
-  <!-- Contato e fale conosco -->
-<section id="contato">
-  <h2>Entre em contato conosco</h2>
-  <p>Preencha o formulário abaixo e fale com a equipe da IFTechHub.</p>
+<!-- Contato -->
+<section id="contato" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4">Entre em contato conosco</h2>
+    <p class="text-center text-muted mb-5">
+      Preencha o formulário abaixo e fale com nossa equipe.
+    </p>
 
-  <form id="form-contato">
-    <div class="campo">
-      <label for="nome">Nome completo *</label>
-      <input type="text" id="nome" name="nome" required>
+    <div class="row g-5 align-items-center">
+
+      <!-- Formulário -->
+      <div class="col-12 col-lg-6">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Nome completo *</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">E-mail *</label>
+            <input type="email" class="form-control" required>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Assunto *</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Mensagem *</label>
+            <textarea class="form-control" rows="5" required></textarea>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary px-4">Enviar mensagem</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+              <h3 class="card-title">Fale com a equipe</h3>
+              <h5> Se preferir, use os contatos abaixo:</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><strong>Email:</strong> contato@iftechhub.com</li>
+                <li class="mb-2"><strong>Telefone:</strong> (11) 99999-9999</li>
+                <li class="mb-2"><strong>Endereço:</strong> Rua Exemplo, 123 — Cidade, UF</li>
+              </ul>
+
+              <hr>
+
+              <p class="mb-0 text-muted small">Atendimento: Segunda a Sexta — 9h às 18h</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="campo">
-      <label for="email">E-mail *</label>
-      <input type="email" id="email" name="email" required>
     </div>
-
-    <div class="campo">
-      <label for="assunto">Assunto *</label>
-      <input type="text" id="assunto" name="assunto" required>
-    </div>
-
-    <div class="campo">
-      <label for="mensagem">Mensagem *</label>
-      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-    </div>
-
-    <button type="submit">Enviar mensagem</button>
-  </form>
+  </div>
 </section>
+
+
 
 
   <!-- Footer -->
