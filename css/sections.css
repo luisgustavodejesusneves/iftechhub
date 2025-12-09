@@ -101,3 +101,29 @@
 .team-track > .member-card {
   min-width: 0;
 }
+/* ===== Seção de Contato ===== */
+
+#contato {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#contato .contact-wrapper {
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+#contato .form-label {
+    font-weight: 500;
+}
+
+#contato .form-control {
+    border-radius: 8px;
+}
+
+#contato button.btn-primary {
+    border-radius: 999px;
+}
