@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/diferenciais.css">
   <link rel="stylesheet" href="css/servicos.css">
+  <link rel="stylesheet" href="css/swot.css">
 
 
   <link rel="shortcut icon" href="img/fivicon/fivicon.png" type="image/x-icon">
@@ -228,6 +229,27 @@
   </div>
 </section>
 
+<!-- Seção: Análise SWOT (imagem) -->
+<section id="swot-image" class="swot-image-section py-5">
+  <div class="container" style="max-width:1300px;">
+
+    <div class="swot-header text-center mb-4">
+      <h2 class="swot-heading">Análise SWOT</h2>
+      <p class="swot-lead">Clique na imagem para ampliar.</p>
+    </div>
+
+    <figure class="swot-figure">
+      <img id="swot-img" src="img/index/analiseSwot.png" alt="Quadro SWOT com forças, fraquezas, oportunidades e riscos" loading="lazy">
+      <figcaption class="swot-figcaption">
+        Análise SWOT visual da IFTechHub — forças, fraquezas, oportunidades e riscos.
+      </figcaption>
+      <button class="swot-zoom-btn" aria-label="Abrir análise SWOT em tamanho maior" id="swot-zoom-btn">🔍 Ampliar</button>
+    </figure>
+  </div>
+
+
+</section>
+
   <!-- Diferenciais -->
     <section id="diferenciais" class="py-5 bg-light">
       <h2 class="text-center mb-5">Diferenciais</h2>
@@ -300,7 +322,7 @@
         </form>
       </div>
 
-      <div class="col-12 col-lg-5">
+      <div class="col-12 col-lg-6">
         <div class="card border-0 shadow-sm h-100">
           <div class="card-body">
               <h3 class="card-title">Fale com a equipe</h3>
@@ -383,6 +405,67 @@
   track.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') next.click();
     if (e.key === 'ArrowLeft') prev.click();
+  });
+})();
+</script>
+
+
+  <!-- analise swot -->
+<script>
+(function () {
+  const btn = document.getElementById('swot-zoom-btn');
+  const thumbImg = document.getElementById('swot-img');
+
+  function ensureLightbox() {
+    let lightbox = document.getElementById('swot-lightbox');
+    if (lightbox) return lightbox;
+    lightbox = document.createElement('div');
+    lightbox.id = 'swot-lightbox';
+    lightbox.className = 'swot-lightbox';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightbox.style.display = 'none';
+
+    lightbox.innerHTML = `
+      <button class="swot-lightbox-close" id="swot-lightbox-close" aria-label="Fechar visualização">✕</button>
+      <div class="swot-lightbox-content">
+        <img id="swot-lightbox-img" src="${thumbImg ? thumbImg.src : ''}" alt="${thumbImg ? (thumbImg.alt || '') : 'Análise SWOT'}">
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+    return lightbox;
+  }
+
+  const lightbox = ensureLightbox();
+  const closeBtn = document.getElementById('swot-lightbox-close');
+  const lbImg = document.getElementById('swot-lightbox-img');
+
+  function openLightbox() {
+    if (thumbImg && lbImg) lbImg.src = thumbImg.src;
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    closeBtn && closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+    btn && btn.focus();
+  }
+
+  btn && btn.addEventListener('click', openLightbox);
+  closeBtn && closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox.getAttribute('aria-hidden') === 'false') {
+      closeLightbox();
+    }
   });
 })();
 </script>

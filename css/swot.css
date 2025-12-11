@@ -1,0 +1,124 @@
+.swot-image-section {
+  background: #ffffff;
+  color: #0f1b33;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.swot-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #0f1b33;
+}
+.swot-lead {
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.swot-figure {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1100px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(15, 27, 51, 0.06);
+  background: #fff;
+}
+
+.swot-figure img#swot-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.swot-figcaption {
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+  background: rgba(255,255,255,0.9);
+}
+
+.swot-zoom-btn {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  z-index: 5;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid #e6eef0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: .95rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(15, 27, 51, 0.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.swot-zoom-btn:hover { transform: translateY(-3px); }
+
+.swot-summary p {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.swot-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  background: rgba(7,12,20,0.65);
+  z-index: 9999;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.swot-lightbox[aria-hidden="false"] { display: flex; }
+
+.swot-lightbox-content {
+  max-width: 1200px;
+  width: 100%;
+  max-height: 92vh;
+  overflow: auto;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 30px 80px rgba(2,6,23,0.6);
+}
+
+.swot-lightbox-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.swot-lightbox-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 10001;
+  background: rgba(255,255,255,0.95);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  box-shadow: 0 8px 20px rgba(15,27,51,0.12);
+}
+
+@media (max-width: 992px) {
+  .swot-figure { border-radius: 8px; }
+  .swot-zoom-btn { right: 10px; top: 10px; padding: 6px 10px; }
+  .swot-figcaption { font-size: 0.9rem; }
+  .swot-heading { font-size: 1.6rem; }
+  .swot-lightbox-content { padding: 0.5rem; }
+}
+
+@media (max-width: 600px) {
+  .swot-summary p { padding: 0 0.75rem; }
+  .swot-figcaption { padding: 0.6rem 0.8rem; }
+}
