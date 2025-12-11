@@ -1,0 +1,20 @@
+#equipe .team-track .member-card {
+  flex: 0 0 calc(33.33% - 1rem); 
+  max-width: calc(33.33% - 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  scroll-snap-align: start;
+}
+
+#equipe .team-track .member-card .card-img-top {
+  width: 100% !important;
+  height: 300px !important;         
+  object-fit: cover !important;
+  object-position: center 28% !important;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -o-object-fit: cover;
+}
+
