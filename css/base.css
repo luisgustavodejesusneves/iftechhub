@@ -12,6 +12,10 @@ html, body {
   height: 100%;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: var(--white);
@@ -20,6 +24,31 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+li,
+label,
+button {
+  overflow-wrap: anywhere;
+}

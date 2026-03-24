@@ -121,4 +121,24 @@
 @media (max-width: 600px) {
   .swot-summary p { padding: 0 0.75rem; }
   .swot-figcaption { padding: 0.6rem 0.8rem; }
+  .swot-lightbox {
+    padding: 1rem;
+  }
+  .swot-lightbox-close {
+    right: 12px;
+    top: 12px;
+  }
+  .swot-zoom-btn {
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: 12px;
+    transform: translateX(-50%);
+    width: calc(100% - 1.5rem);
+    max-width: 240px;
+    text-align: center;
+  }
+  .swot-zoom-btn:hover {
+    transform: translateX(-50%);
+  }
 }

@@ -12,3 +12,10 @@
 @media (max-width: 768px) {
   .container { padding: 0 1rem; }
 }
+
+@media (max-width: 575.98px) {
+  .py-5 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
